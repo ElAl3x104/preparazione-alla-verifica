@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Email } from '../Email/email.models';
 import { JsonPipe } from '@angular/common';
+import { SentMailComponent } from './sent-mail/sent-mail.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, JsonPipe],
+  imports: [RouterOutlet, JsonPipe, SentMailComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

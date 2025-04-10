@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Email } from '../../Email/email.models';
+
 
 @Component({
   selector: 'app-sent-mail',
@@ -8,5 +10,5 @@ import { Component } from '@angular/core';
   styleUrl: './sent-mail.component.css'
 })
 export class SentMailComponent {
-
+  @Input() email!: Email;
 }
