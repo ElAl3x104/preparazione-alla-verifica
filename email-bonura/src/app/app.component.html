@@ -1,22 +1,27 @@
+<div class="container">
+  <form class="jumbotron">
+    <h1 class="display-4">Manda una mail</h1>
+    <div class="form-group">
+      <label for="mail">Mail:</label>
+      <input name="mail" #email>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="oggetto">Oggetto:</label>
+      <input name="oggetto" #oggetto>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="testo">Testo:</label>
+      <input name="testo" #testo>
+    </div>
+    <br>
+    <button (click) = "invia(email, oggetto, testo)">
+        invia
+    </button>
+  </form>
+</div>
 
-<form>
-  <h1>Manda una mail</h1>
-  <div>
-    <label for="mail">Mail:</label>
-    <input name="mail" #email>
-  </div>
-  <div>
-    <label for="oggetto">Oggetto:</label>
-    <input name="oggetto" #oggetto>
-  </div>
-  <div>
-    <label for="testo">Testo:</label>
-    <input name="testo" #testo>
-  </div>
-  <button (click) = "invia(email, oggetto, testo)">
-      invia
-  </button>
-</form>
 
 @for(email of emailvett; track email){
   <app-sent-mail [email] ="email"></app-sent-mail>

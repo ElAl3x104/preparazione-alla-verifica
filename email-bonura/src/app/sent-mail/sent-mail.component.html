@@ -1,7 +1,18 @@
 email ricevuta da:
-<p>{{email.email}}</p>
-<p>{{email.oggetto}}</p>
-<p>{{email.testo}}</p>
-<button>
-    espandi
+<div [ngStyle] = "{'background-color' :labelColor}">
+    <p>{{email.email}}</p>  
+    <button (click)="espandi()">
+        espandi
+    </button>
+</div>
+@if(visibile == true){
+    <p>{{email.oggetto}}</p>
+    <p>{{email.testo}}</p>
+    }
+<button (click)="espandi()">
+    chiudi
+</button>
+
+<button (click)="speciale()">
+    speciale
 </button>
